@@ -1,0 +1,7 @@
+{
+  "id": "codex_barkeep",
+  "kind": "codex",
+  "title": "The Barkeep",
+  "body": "Runs the Hollowleaf Tavern. Polite to outsiders, careful with words about the storyteller. He is the Old Soldier's brother and clearly does not like to hear his brother's version of events repeated under his roof.",
+  "trigger": {"requires": ["talked_barkeep"]}
+}

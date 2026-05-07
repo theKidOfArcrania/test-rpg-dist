@@ -1,0 +1,23 @@
+{
+  "id": "echoes_in_stone",
+  "name": "Echoes in Stone",
+  "description": "The Forest Healer hinted at relics that 'speak more truthfully than he does'. There is a stone shrine hidden in the woods. See it for yourself.",
+  "start_when": {"requires": ["talked_healer_after_clear"]},
+  "objectives": [
+    {
+      "id": "find_shrine",
+      "description": "Find the dragon shrine in the forest.",
+      "complete_when": {"requires": ["entered_dragon_shrine"]}
+    },
+    {
+      "id": "defeat_guardian",
+      "description": "Defeat the guardian standing watch.",
+      "complete_when": {"requires": ["shrine_guardian_defeated"]}
+    },
+    {
+      "id": "claim_relic",
+      "description": "Recover the dragon's tooth from the altar.",
+      "complete_when": {"requires": ["picked_up_dragons_tooth"]}
+    }
+  ]
+}

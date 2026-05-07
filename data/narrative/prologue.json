@@ -1,0 +1,12 @@
+{
+  "id": "prologue",
+  "kind": "storybook",
+  "category": "prologue",
+  "title": "The Book Opens",
+  "pages": [
+    "You found the book in a corner of the shop, where the dust lay too thick to be accidental. The cover was warm. You opened it.",
+    "The pages spelled out an epic in a hand that seemed almost proud of itself - a hero's saga, told by the hero. You read about a dragon, a mountain, a vow.",
+    "You read until the lamp guttered out. You did not notice when the room around you fell away.",
+    "Now you stand in a small village under a sky that is not your own. The hero's saga has long since happened. He has gone. You are an extra in a story that was supposed to have ended."
+  ]
+}

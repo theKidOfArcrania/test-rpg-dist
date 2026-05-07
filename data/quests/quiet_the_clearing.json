@@ -1,0 +1,18 @@
+{
+  "id": "quiet_the_clearing",
+  "name": "Quiet the Clearing",
+  "description": "The Forest Healer warned you about the slimes. Drive them out so the clearing falls quiet again.",
+  "start_when": {"requires": ["talked_healer"]},
+  "objectives": [
+    {
+      "id": "clear_forest_slimes",
+      "description": "Defeat every slime in the forest clearing.",
+      "complete_when": {"requires": ["cleared_forest"]}
+    },
+    {
+      "id": "return_to_healer",
+      "description": "Return to the Forest Healer in the quiet clearing.",
+      "complete_when": {"requires": ["cleared_forest", "talked_healer_after_clear"]}
+    }
+  ]
+}

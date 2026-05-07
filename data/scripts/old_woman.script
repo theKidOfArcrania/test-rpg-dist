@@ -1,0 +1,40 @@
+// Forest Healer interaction. Most of the unsolved version is forced
+// (you can't X out of her conversations until you've cleared the
+// slimes); after `cleared_forest` her demeanor relaxes and she
+// lets you go, so abort-checks become meaningful.
+//
+// Convention: any aborted dialogue / dialogue_choice exits the
+// script. (Yielding calls have to be bound to a local before being
+// used in a conditional.)
+
+set_flag("talked_healer");
+let unforced = has_flag("cleared_forest");
+let forced = !unforced;
+
+if unforced {
+    let ok = dialogue("old_woman_intro_cleared", forced);
+    if !ok { return; }
+    set_flag("talked_healer_after_clear");
+    let c = dialogue_choice(forced, "What is it?", "I should keep moving.");
+    if c == -1 { return; }
+    if c == 0 {
+        dialogue("old_woman_different", forced);
+    }
+    return;
+}
+
+let ok = dialogue("old_woman_intro", forced);
+if !ok { return; }
+let c = dialogue_choice(forced, "The soldier in the village sent me.", "I'm just exploring.");
+if c == -1 { return; }
+if c == 0 {
+    let ok = dialogue("old_woman_soldier", forced);
+    if !ok { return; }
+    let c2 = dialogue_choice(forced, "Different how?", "I see.");
+    if c2 == -1 { return; }
+    if c2 == 0 {
+        dialogue("old_woman_different", forced);
+    }
+} else if c == 1 {
+    dialogue("old_woman_explore", forced);
+}

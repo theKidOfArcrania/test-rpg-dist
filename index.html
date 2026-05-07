@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>test-rpg</title>
+    <style>
+        html, body, canvas {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            background: #000;
+            z-index: 0;
+        }
+        canvas:focus { outline: none; }
+    </style>
+</head>
+<body>
+    <canvas id="glcanvas" tabindex="1"></canvas>
+    <!-- Local copy of macroquad's miniquad JS bundle, patched to add
+         the glCheckFramebufferStatus / glReadBuffer / glBlitFramebuffer
+         imports that miniquad's WASM render-target path needs but the
+         upstream CDN bundle is missing. See macroquad issue #989. -->
+    <script src="mq_js_bundle.js"></script>
+    <script>load("test-rpg.wasm");</script>
+</body>
+</html>

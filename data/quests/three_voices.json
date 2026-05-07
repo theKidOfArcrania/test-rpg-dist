@@ -1,0 +1,22 @@
+{
+  "id": "three_voices",
+  "name": "Three Voices",
+  "description": "Speak with the people who still remember the storyteller. Their accounts won't quite line up.",
+  "objectives": [
+    {
+      "id": "barkeep",
+      "description": "Speak with the Barkeep in the village.",
+      "complete_when": {"requires": ["talked_barkeep"]}
+    },
+    {
+      "id": "soldier",
+      "description": "Speak with the Old Soldier in the test map.",
+      "complete_when": {"requires": ["talked_soldier"]}
+    },
+    {
+      "id": "healer",
+      "description": "Speak with the Forest Healer in the forest clearing.",
+      "complete_when": {"requires": ["talked_healer"]}
+    }
+  ]
+}

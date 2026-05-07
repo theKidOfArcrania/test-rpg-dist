@@ -1,0 +1,9 @@
+// Demo cutscene: fires the first time the player walks into the
+// village trigger box. Uses `return` to bail on subsequent triggers
+// so it only narrates once even though the trigger system itself
+// is just edge-detected (no built-in once-ness).
+
+if has_flag("entered_village") { return; }
+set_flag("entered_village");
+
+storybook("village_arrival");

@@ -1,0 +1,11 @@
+{
+  "id": "village_arrival",
+  "kind": "storybook",
+  "category": "prologue",
+  "title": "Hollowleaf",
+  "trigger": {"requires": ["entered_village"]},
+  "pages": [
+    "The path opens onto a small village. A weathered sign reads HOLLOWLEAF.",
+    "It looks ordinary. Lived in. Real - in a way the book had not prepared you for."
+  ]
+}

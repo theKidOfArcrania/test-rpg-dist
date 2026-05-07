@@ -1,0 +1,39 @@
+// Old Soldier interaction. Explains -> optionally probes for the
+// "ugly" reveal which is forced (no X-abort) and sets the
+// met_old_soldier flag the barkeep keys off of.
+//
+// Convention: any non-forced dialogue / dialogue_choice that the
+// player aborts (X) bails the whole script via `return;`. That way
+// X always means "I'm done with this NPC" no matter how deep we are.
+// (Yielding calls have to be bound to a local before being read in
+// any conditional - the VM only allows them at top-level let/assign/
+// bare positions.)
+
+set_flag("talked_soldier");
+
+let ok = dialogue("wanderer_intro");
+if !ok { return; }
+
+let c = dialogue_choice("What do you mean?", "I'm just a traveler.");
+if c == -1 { return; }
+
+if c == 0 {
+    let ok = dialogue("wanderer_explain");
+    if !ok { return; }
+    let c2 = dialogue_choice("Tell me about him.", "I have to go.");
+    if c2 == -1 { return; }
+    if c2 == 0 {
+        let ok = dialogue("wanderer_him");
+        if !ok { return; }
+        let c3 = dialogue_choice("What did he leave out?", "Maybe later.");
+        if c3 == -1 { return; }
+        if c3 == 0 {
+            // Forced: the soldier won't let you walk off until you
+            // hear this part out, so the bool is always true.
+            dialogue("wanderer_ugly", true);
+            set_flag("met_old_soldier");
+        }
+    }
+} else if c == 1 {
+    dialogue("wanderer_deflect");
+}

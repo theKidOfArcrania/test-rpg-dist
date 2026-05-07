@@ -1,0 +1,11 @@
+// Fires when the player walks into the boss arena chokepoint inside
+// the dragon shrine. The first time, opens the shrine guardian
+// turn-based battle; on victory, sets the defeated flag so neither
+// the trigger nor the codex/quest hooks fire again. On defeat, the
+// player respawns at the village (handled by the engine) and the
+// flag stays unset, so they get another shot when they walk back in.
+
+if has_flag("shrine_guardian_defeated") { return; }
+let won = battle("shrine_guardian");
+if !won { return; }
+set_flag("shrine_guardian_defeated");

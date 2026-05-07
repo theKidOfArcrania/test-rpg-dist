@@ -1,0 +1,14 @@
+{
+  "id": "flashback_dragons_tooth",
+  "kind": "storybook",
+  "category": "flashback",
+  "title": "The Tooth",
+  "trigger": {"requires": ["picked_up_dragons_tooth"]},
+  "pages": [
+    "The relic is heavier than it looks. It feels almost warm in your hand.",
+    "You see the storyteller again, younger, kneeling at this same altar. There is no dragon. There is a slime - a large, sad slime - and a knife.",
+    "He is crying. He is also grinning, because he knows what story he will tell about today.",
+    "'Five days, five nights,' he practices, under his breath. 'Five days, five nights.'",
+    "The vision fades. The relic in your hand is just a chipped piece of ivory. Could be from anything."
+  ]
+}

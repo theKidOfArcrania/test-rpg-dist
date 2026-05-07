@@ -1,0 +1,7 @@
+{
+  "id": "codex_forest_healer",
+  "kind": "codex",
+  "title": "The Forest Healer",
+  "body": "An old woman who keeps a clearing in the forest north of the village. She knew the storyteller before he was a hero. She speaks of the time before the saga began as if it were a separate, quieter book.",
+  "trigger": {"requires": ["talked_healer"]}
+}

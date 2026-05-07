@@ -1,0 +1,7 @@
+{
+  "id": "codex_dragon_shrine",
+  "kind": "codex",
+  "title": "The Dragon Shrine",
+  "body": "An old stone room in the heart of the forest. The hero left it standing after his last campaign, but the villagers refuse to come up here. A single guardian still lingers among the broken altar stones, watching the relic in the center.",
+  "trigger": {"requires": ["entered_dragon_shrine"]}
+}

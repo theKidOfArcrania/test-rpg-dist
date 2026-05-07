@@ -1,0 +1,55 @@
+// Barkeep interaction. Two intro variants depending on whether
+// you've heard the soldier's "ugly" reveal.
+//
+// Convention: any aborted dialogue / dialogue_choice exits the
+// script. (Yielding calls have to be bound to a local before being
+// used in a conditional.)
+
+set_flag("talked_barkeep");
+
+if has_flag("met_old_soldier") {
+    let ok = dialogue("barkeep_intro_aware");
+    if !ok { return; }
+    let c = dialogue_choice(
+        "He served with the storyteller.",
+        "Tell me about the storyteller.",
+        "Just passing through."
+    );
+    if c == -1 { return; }
+    if c == 0 {
+        let ok = dialogue("barkeep_defend_soldier");
+        if !ok { return; }
+        set_flag("heard_barkeep_defense");
+        return;
+    } else if c == 1 {
+        // fall through to the storyteller branch
+    } else {
+        return;
+    }
+} else {
+    let ok = dialogue("barkeep_intro");
+    if !ok { return; }
+    let c = dialogue_choice(
+        "Tell me about the storyteller.",
+        "What do you know about the forest?",
+        "Just passing through."
+    );
+    if c == -1 { return; }
+    if c == 1 {
+        dialogue("barkeep_forest");
+        return;
+    } else if c == 2 {
+        return;
+    }
+    // c == 0 falls through to the storyteller branch below.
+}
+
+let ok = dialogue("barkeep_storyteller");
+if !ok { return; }
+let c = dialogue_choice("Different how?", "Sounds like a fine man.", "I should be going.");
+if c == -1 { return; }
+if c == 0 {
+    dialogue("barkeep_darker");
+} else if c == 1 {
+    dialogue("barkeep_praise");
+}

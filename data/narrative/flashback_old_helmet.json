@@ -1,0 +1,14 @@
+{
+  "id": "flashback_old_helmet",
+  "kind": "storybook",
+  "category": "flashback",
+  "title": "The Helmet by the Pond",
+  "pages": [
+    "Your fingers close on a dented helmet half-sunk in the reeds, and the world goes quiet.",
+    "You see two boys at this same pond a long time ago. One of them is laughing in a way that does not quite reach his eyes. He is showing the other how to wear it.",
+    "'When I am the hero,' he says, 'I'll come back and tell you exactly how it really happened.'",
+    "The other boy is the Old Soldier. He is much younger. He is not laughing.",
+    "The vision releases you. The helmet is just a helmet again. But the pond no longer feels so quiet."
+  ],
+  "trigger": {"requires": ["picked_up_old_helmet"]}
+}

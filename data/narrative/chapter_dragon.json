@@ -1,0 +1,13 @@
+{
+  "id": "chapter_dragon",
+  "kind": "storybook",
+  "category": "chapter",
+  "title": "Chapter the First: The Dragon",
+  "trigger": {"requires": ["shrine_guardian_defeated"]},
+  "pages": [
+    "From the saga, recited at every Hollowleaf hearth:",
+    "\"And the storyteller stood alone before the Dragon, in a chamber of stone deep beneath the wood. Five days he fought it. Five nights its fire raged.\"",
+    "\"On the sixth dawn, the Dragon was no more, and the storyteller carried home its tooth as proof of his deed.\"",
+    "It is a stirring tale. You are standing in the chamber now. There has been no fire here in a long time."
+  ]
+}

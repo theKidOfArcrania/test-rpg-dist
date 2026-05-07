@@ -1,0 +1,7 @@
+{
+  "id": "codex_old_soldier",
+  "kind": "codex",
+  "title": "The Old Soldier",
+  "body": "A retired veteran who served alongside the storyteller-hero in the campaigns described in the saga. His memory of the events is not entirely consistent with the published version. He noticed at once that you do not belong here.",
+  "trigger": {"requires": ["talked_soldier"]}
+}

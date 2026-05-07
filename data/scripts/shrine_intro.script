@@ -1,0 +1,6 @@
+// Fires the first time the player walks into the dragon shrine
+// trigger box. Sets the flag the codex entry keys off, and
+// suppresses any further fires via the standard once-pattern.
+
+if has_flag("entered_dragon_shrine") { return; }
+set_flag("entered_dragon_shrine");
