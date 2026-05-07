@@ -865,7 +865,7 @@
  "tilesets": [
   {
    "firstgid": 1,
-   "source": "../../assets/tilesets/tileset.tsj"
+   "source": "../tilesets/tileset.tsj"
   }
  ],
  "tilewidth": 32,
