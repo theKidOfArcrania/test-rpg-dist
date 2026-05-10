@@ -1,0 +1,14 @@
+{
+  "rows": 2,
+  "cols": 2,
+  "cells": [
+    [
+      { "down": 65, "left": 67, "up": 69, "right": 71 },
+      { "down": 73, "left": 75, "up": 77, "right": 79 }
+    ],
+    [
+      { "down": 81, "left": 83, "up": 85, "right": 87 },
+      { "down": 89, "left": 91, "up": 93, "right": 95 }
+    ]
+  ]
+}

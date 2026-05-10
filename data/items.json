@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "Heal Potion",
+    "stack_max": 9,
+    "sprite_id": "heal_potion",
+    "kind": { "Consumable": { "HealHp": 3 } }
+  },
+  {
+    "id": 2,
+    "name": "Mana Potion",
+    "stack_max": 9,
+    "sprite_id": "mana_potion",
+    "kind": { "Consumable": { "HealMp": 4 } }
+  },
+  {
+    "id": 3,
+    "name": "Rusty Sword",
+    "stack_max": 1,
+    "sprite_id": "rusty_sword",
+    "kind": {
+      "Equipment": {
+        "slot": "Weapon",
+        "bonus": { "atk": 1 }
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "Leather Vest",
+    "stack_max": 1,
+    "sprite_id": "leather_vest",
+    "kind": {
+      "Equipment": {
+        "slot": "Armor",
+        "bonus": { "def": 1 },
+        "armor_hp": 5
+      }
+    }
+  }
+]
