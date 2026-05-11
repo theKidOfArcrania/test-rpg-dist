@@ -1027,9 +1027,9 @@
      "name": "",
      "properties": [
       {
-       "name": "marker",
-       "type": "bool",
-       "value": false
+       "name": "script",
+       "type": "string",
+       "value": "door"
       },
       {
        "name": "target_entry",
@@ -1043,7 +1043,7 @@
       }
      ],
      "rotation": 0,
-     "type": "door",
+     "type": "trigger",
      "visible": true,
      "width": 32,
      "x": 0,
@@ -1073,9 +1073,9 @@
      "name": "",
      "properties": [
       {
-       "name": "marker",
-       "type": "bool",
-       "value": false
+       "name": "script",
+       "type": "string",
+       "value": "door"
       },
       {
        "name": "target_entry",
@@ -1089,7 +1089,7 @@
       }
      ],
      "rotation": 0,
-     "type": "door",
+     "type": "trigger",
      "visible": true,
      "width": 96,
      "x": 416,

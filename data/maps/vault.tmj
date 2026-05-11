@@ -338,6 +338,11 @@
      "name": "",
      "properties": [
       {
+       "name": "script",
+       "type": "string",
+       "value": "door"
+      },
+      {
        "name": "target_entry",
        "type": "string",
        "value": "from_vault"
@@ -349,7 +354,7 @@
       }
      ],
      "rotation": 0,
-     "type": "door",
+     "type": "trigger",
      "visible": true,
      "width": 32,
      "x": 224,

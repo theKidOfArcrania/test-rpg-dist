@@ -2214,9 +2214,9 @@
      "name": "",
      "properties": [
       {
-       "name": "marker",
-       "type": "bool",
-       "value": false
+       "name": "script",
+       "type": "string",
+       "value": "door"
       },
       {
        "name": "target_entry",
@@ -2235,7 +2235,7 @@
      "width": 32,
      "x": 1248,
      "y": 384,
-     "class": "door"
+     "class": "trigger"
     },
     {
      "height": 32,

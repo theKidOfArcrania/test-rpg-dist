@@ -1272,9 +1272,9 @@
      "name": "",
      "properties": [
       {
-       "name": "marker",
-       "type": "bool",
-       "value": false
+       "name": "script",
+       "type": "string",
+       "value": "door"
       },
       {
        "name": "target_entry",
@@ -1293,7 +1293,7 @@
      "width": 96,
      "x": 288,
      "y": 544,
-     "class": "door"
+     "class": "trigger"
     },
     {
      "height": 32,
@@ -1522,9 +1522,9 @@
      "name": "",
      "properties": [
       {
-       "name": "marker",
-       "type": "bool",
-       "value": false
+       "name": "script",
+       "type": "string",
+       "value": "door"
       },
       {
        "name": "target_entry",
@@ -1543,7 +1543,7 @@
      "width": 128,
      "x": 288,
      "y": 0,
-     "class": "door"
+     "class": "trigger"
     }
    ],
    "opacity": 1,
