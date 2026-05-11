@@ -1,0 +1,15 @@
+// Stock door script: triggered by entry into a `class: door`
+// (or any `class: trigger` whose `script` prop is set to "door").
+//
+// Reads `target_map` and `target_entry` from the trigger's args
+// (populated from the Tiled MapObject's string properties) and
+// hands them to the `change_area` host call, which tears down
+// this script's VM and queues the area swap.
+//
+// Authors don't normally hand-tweak this script - it's the
+// default for every door MapObject. If you need a door that
+// gates on a story flag or plays a knock cutscene first, set
+// the `script` prop on the door object to a custom script id
+// (e.g. `door_dragon_shrine`) and write that script bespoke.
+
+change_area(arg("target_map"), arg("target_entry"));

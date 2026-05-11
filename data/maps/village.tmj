@@ -15,7 +15,7 @@
     2,
     2,
     2,
-    2,
+    7,
     2,
     2,
     1,
@@ -39,9 +39,9 @@
     1,
     1,
     1,
-    1,
-    1,
-    1,
+    2,
+    2,
+    2,
     1,
     1,
     4,
@@ -939,36 +939,33 @@
      "id": 1,
      "name": "",
      "rotation": 0,
-     "type": "",
+     "type": "player_spawn",
      "visible": true,
      "width": 32,
      "x": 32,
-     "y": 288,
-     "class": "player_spawn"
+     "y": 288
     },
     {
      "height": 32,
      "id": 2,
      "name": "",
      "rotation": 0,
-     "type": "",
+     "type": "slime",
      "visible": true,
      "width": 32,
      "x": 448,
-     "y": 448,
-     "class": "slime"
+     "y": 448
     },
     {
      "height": 32,
      "id": 3,
      "name": "",
      "rotation": 0,
-     "type": "",
+     "type": "slime",
      "visible": true,
      "width": 32,
      "x": 544,
-     "y": 352,
-     "class": "slime"
+     "y": 352
     },
     {
      "height": 32,
@@ -982,12 +979,11 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "pickup",
      "visible": true,
      "width": 32,
      "x": 160,
-     "y": 128,
-     "class": "pickup"
+     "y": 128
     },
     {
      "height": 32,
@@ -1001,12 +997,11 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "pickup",
      "visible": true,
      "width": 32,
      "x": 192,
-     "y": 128,
-     "class": "pickup"
+     "y": 128
     },
     {
      "height": 32,
@@ -1020,12 +1015,11 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "entry",
      "visible": true,
      "width": 32,
      "x": 32,
-     "y": 288,
-     "class": "entry"
+     "y": 288
     },
     {
      "height": 64,
@@ -1049,12 +1043,11 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "door",
      "visible": true,
      "width": 32,
      "x": 0,
-     "y": 288,
-     "class": "door"
+     "y": 288
     },
     {
      "height": 32,
@@ -1068,12 +1061,11 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "entry",
      "visible": true,
      "width": 32,
      "x": 448,
-     "y": 32,
-     "class": "entry"
+     "y": 32
     },
     {
      "height": 32,
@@ -1097,12 +1089,11 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "door",
      "visible": true,
      "width": 96,
      "x": 416,
-     "y": 0,
-     "class": "door"
+     "y": 0
     },
     {
      "height": 32,
@@ -1121,12 +1112,11 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "npc",
      "visible": true,
      "width": 32,
      "x": 160,
-     "y": 128,
-     "class": "npc"
+     "y": 128
     },
     {
      "height": 32,
@@ -1140,12 +1130,67 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "trigger",
      "visible": true,
      "width": 64,
      "x": 96,
-     "y": 288,
-     "class": "trigger"
+     "y": 288
+    },
+    {
+     "height": 32,
+     "id": 12,
+     "name": "",
+     "properties": [
+      {
+       "name": "script",
+       "type": "string",
+       "value": "door"
+      },
+      {
+       "name": "sprite",
+       "type": "string",
+       "value": "door"
+      },
+      {
+       "name": "target_entry",
+       "type": "string",
+       "value": "from_village_vault"
+      },
+      {
+       "name": "target_map",
+       "type": "string",
+       "value": "vault"
+      },
+      {
+       "name": "verb",
+       "type": "string",
+       "value": "Open"
+      }
+     ],
+     "rotation": 0,
+     "type": "interactable",
+     "visible": true,
+     "width": 32,
+     "x": 320,
+     "y": 37
+    },
+    {
+     "height": 32,
+     "id": 13,
+     "name": "",
+     "properties": [
+      {
+       "name": "name",
+       "type": "string",
+       "value": "from_vault"
+      }
+     ],
+     "rotation": 0,
+     "type": "entry",
+     "visible": true,
+     "width": 32,
+     "x": 320,
+     "y": 64
     }
    ],
    "opacity": 1,
@@ -1156,7 +1201,7 @@
   }
  ],
  "nextlayerid": 4,
- "nextobjectid": 12,
+ "nextobjectid": 14,
  "orientation": "orthogonal",
  "renderorder": "right-down",
  "tiledversion": "1.11.0",

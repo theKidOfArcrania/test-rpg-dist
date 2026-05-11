@@ -416,6 +416,54 @@ def paint_spark(img: Image.Image, row: int, col: int) -> None:
             img.putpixel((x + cx + dx, y + cy + dy), body)
 
 
+def paint_door(img: Image.Image, row: int, col: int) -> None:
+    """Generic interactable door - a wooden plank arch with iron
+    bands and a small handle. Single 24x24 frame; renders the
+    same in all four facings (Interactables don't have a facing
+    of their own, just a sprite_id pointed at this tile)."""
+    clear_cell(img, col, row)
+    x, y = cell_origin(col, row)
+    plank = (110, 70, 30, 255)
+    plank_dark = (60, 35, 12, 255)
+    plank_hl = (160, 110, 60, 255)
+    iron = (60, 60, 70, 255)
+    iron_hl = (130, 130, 150, 255)
+    handle = (220, 200, 60, 255)
+    # Door body (rows 4..22, cols 5..18) - tall arched plank.
+    for by in range(4, 23):
+        for bx in range(5, 19):
+            img.putpixel((x + bx, y + by), plank)
+    # Vertical plank seams (every 3 cols).
+    for sx in (8, 11, 14):
+        for sy in range(5, 22):
+            img.putpixel((x + sx, y + sy), plank_dark)
+    # Soft highlight stripe on the leftmost plank.
+    for hy in range(5, 22):
+        img.putpixel((x + 6, y + hy), plank_hl)
+    # Iron horizontal bands (top + bottom).
+    for ix in range(5, 19):
+        img.putpixel((x + ix, y + 6), iron)
+        img.putpixel((x + ix, y + 7), iron_hl)
+        img.putpixel((x + ix, y + 19), iron)
+        img.putpixel((x + ix, y + 20), iron_hl)
+    # Iron studs at the band ends.
+    for sy in (6, 19):
+        img.putpixel((x + 5, y + sy), iron_hl)
+        img.putpixel((x + 18, y + sy), iron_hl)
+    # Frame outline.
+    for fy in range(4, 23):
+        img.putpixel((x + 4, y + fy), plank_dark)
+        img.putpixel((x + 19, y + fy), plank_dark)
+    for fx in range(4, 20):
+        img.putpixel((x + fx, y + 3), plank_dark)
+        img.putpixel((x + fx, y + 22), plank_dark)
+    # Handle (small brass nub on the right side).
+    img.putpixel((x + 16, y + 13), handle)
+    img.putpixel((x + 17, y + 13), handle)
+    img.putpixel((x + 16, y + 14), handle)
+    img.putpixel((x + 17, y + 14), handle)
+
+
 # --- entry -----------------------------------------------------------------
 
 
@@ -426,6 +474,7 @@ def main() -> None:
     paint_npc(img, row=6)
     paint_pickups(img, row=7)
     paint_spark(img, row=8, col=0)
+    paint_door(img, row=8, col=1)
     img.save(SHEET)
     print(f"wrote {SHEET}")
 
