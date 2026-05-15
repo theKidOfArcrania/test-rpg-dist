@@ -30,7 +30,7 @@ if c == 0 {
         if c3 == 0 {
             // Forced: the soldier won't let you walk off until you
             // hear this part out, so the bool is always true.
-            dialogue(true, "wanderer_ugly");
+            dialogue("wanderer_ugly", true);
             set_flag("met_old_soldier");
         }
     }

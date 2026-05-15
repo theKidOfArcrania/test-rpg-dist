@@ -1,1 +1,1 @@
-return !has_flag(arg("flag"));
+!has_flag(arg("flag"))
