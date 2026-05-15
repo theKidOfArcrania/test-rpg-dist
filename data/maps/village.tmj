@@ -1215,5 +1215,12 @@
  "tilewidth": 32,
  "type": "map",
  "version": "1.10",
- "width": 25
+ "width": 25,
+ "properties": [
+  {
+   "name": "audio",
+   "type": "string",
+   "value": "village_theme"
+  }
+ ]
 }

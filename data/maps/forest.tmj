@@ -1247,24 +1247,22 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "entry",
      "visible": true,
      "width": 32,
      "x": 320,
-     "y": 512,
-     "class": "entry"
+     "y": 512
     },
     {
      "height": 32,
      "id": 2,
      "name": "",
      "rotation": 0,
-     "type": "",
+     "type": "player_spawn",
      "visible": true,
      "width": 32,
      "x": 320,
-     "y": 512,
-     "class": "player_spawn"
+     "y": 512
     },
     {
      "height": 32,
@@ -1288,12 +1286,11 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "trigger",
      "visible": true,
      "width": 96,
      "x": 288,
-     "y": 544,
-     "class": "trigger"
+     "y": 544
     },
     {
      "height": 32,
@@ -1301,28 +1298,27 @@
      "name": "",
      "properties": [
       {
-       "name": "clear_on_spawn",
-       "type": "string",
-       "value": "cleared_forest"
-      },
-      {
        "name": "kill_group",
-       "type": "string",
-       "value": "forest_slimes"
+       "type": "object",
+       "value": 14
       },
       {
-       "name": "kill_group_clear_flag",
+       "name": "on_kill_group:ref",
+       "type": "object",
+       "value": 14
+      },
+      {
+       "name": "on_spawn:clear_flag",
        "type": "string",
        "value": "cleared_forest"
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "slime",
      "visible": true,
      "width": 32,
      "x": 256,
-     "y": 192,
-     "class": "slime"
+     "y": 192
     },
     {
      "height": 32,
@@ -1330,33 +1326,32 @@
      "name": "",
      "properties": [
       {
-       "name": "clear_on_spawn",
-       "type": "string",
-       "value": "cleared_forest"
-      },
-      {
        "name": "kill_group",
-       "type": "string",
-       "value": "forest_slimes"
+       "type": "object",
+       "value": 14
       },
       {
-       "name": "kill_group_clear_flag",
+       "name": "on_kill:set_flag",
        "type": "string",
-       "value": "cleared_forest"
+       "value": "forest_slime"
       },
       {
-       "name": "respawn",
-       "type": "bool",
-       "value": false
+       "name": "on_kill_group:ref",
+       "type": "object",
+       "value": 14
+      },
+      {
+       "name": "on_spawn:ref",
+       "type": "object",
+       "value": 15
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "slime",
      "visible": true,
      "width": 32,
      "x": 352,
-     "y": 160,
-     "class": "slime"
+     "y": 160
     },
     {
      "height": 32,
@@ -1364,28 +1359,27 @@
      "name": "",
      "properties": [
       {
-       "name": "clear_on_spawn",
-       "type": "string",
-       "value": "cleared_forest"
-      },
-      {
        "name": "kill_group",
-       "type": "string",
-       "value": "forest_slimes"
+       "type": "object",
+       "value": 14
       },
       {
-       "name": "kill_group_clear_flag",
+       "name": "on_kill_group:ref",
+       "type": "object",
+       "value": 14
+      },
+      {
+       "name": "on_spawn:clear_flag",
        "type": "string",
        "value": "cleared_forest"
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "slime",
      "visible": true,
      "width": 32,
      "x": 448,
-     "y": 224,
-     "class": "slime"
+     "y": 224
     },
     {
      "height": 32,
@@ -1393,28 +1387,27 @@
      "name": "",
      "properties": [
       {
-       "name": "clear_on_spawn",
-       "type": "string",
-       "value": "cleared_forest"
-      },
-      {
        "name": "kill_group",
-       "type": "string",
-       "value": "forest_slimes"
+       "type": "object",
+       "value": 14
       },
       {
-       "name": "kill_group_clear_flag",
+       "name": "on_kill_group:ref",
+       "type": "object",
+       "value": 14
+      },
+      {
+       "name": "on_spawn:clear_flag",
        "type": "string",
        "value": "cleared_forest"
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "slime",
      "visible": true,
      "width": 32,
      "x": 320,
-     "y": 256,
-     "class": "slime"
+     "y": 256
     },
     {
      "height": 32,
@@ -1428,12 +1421,11 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "pickup",
      "visible": true,
      "width": 32,
      "x": 448,
-     "y": 160,
-     "class": "pickup"
+     "y": 160
     },
     {
      "height": 32,
@@ -1447,12 +1439,11 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "pickup",
      "visible": true,
      "width": 32,
      "x": 224,
-     "y": 128,
-     "class": "pickup"
+     "y": 128
     },
     {
      "height": 32,
@@ -1466,12 +1457,11 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "pickup",
      "visible": true,
      "width": 32,
      "x": 416,
-     "y": 128,
-     "class": "pickup"
+     "y": 128
     },
     {
      "height": 32,
@@ -1490,12 +1480,11 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "npc",
      "visible": true,
      "width": 32,
      "x": 384,
-     "y": 192,
-     "class": "npc"
+     "y": 192
     },
     {
      "height": 32,
@@ -1509,12 +1498,11 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "entry",
      "visible": true,
      "width": 32,
      "x": 320,
-     "y": 32,
-     "class": "entry"
+     "y": 32
     },
     {
      "height": 32,
@@ -1538,12 +1526,52 @@
       }
      ],
      "rotation": 0,
-     "type": "",
+     "type": "trigger",
      "visible": true,
      "width": 128,
      "x": 288,
-     "y": 0,
-     "class": "trigger"
+     "y": 0
+    },
+    {
+     "height": 0,
+     "id": 14,
+     "name": "slime_group",
+     "properties": [
+      {
+       "name": ":set_flag",
+       "type": "string",
+       "value": "cleared_forest"
+      }
+     ],
+     "rotation": 0,
+     "type": "object",
+     "visible": true,
+     "width": 1,
+     "x": 13,
+     "y": 16
+    },
+    {
+     "height": 6,
+     "id": 15,
+     "name": "permadead",
+     "properties": [
+      {
+       "name": "flag",
+       "type": "string",
+       "value": "forest_slime"
+      },
+      {
+       "name": "script",
+       "type": "string",
+       "value": "no_respawn"
+      }
+     ],
+     "rotation": 0,
+     "type": "object",
+     "visible": true,
+     "width": 6,
+     "x": 10,
+     "y": 49
     }
    ],
    "opacity": 1,
@@ -1554,7 +1582,7 @@
   }
  ],
  "nextlayerid": 5,
- "nextobjectid": 14,
+ "nextobjectid": 16,
  "orientation": "orthogonal",
  "renderorder": "right-down",
  "tiledversion": "1.11.0",

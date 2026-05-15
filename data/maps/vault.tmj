@@ -437,5 +437,12 @@
  "tilewidth": 32,
  "type": "map",
  "version": "1.10",
- "width": 14
+ "width": 14,
+ "properties": [
+  {
+   "name": "audio",
+   "type": "string",
+   "value": "silence"
+  }
+ ]
 }

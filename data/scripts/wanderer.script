@@ -14,23 +14,23 @@ set_flag("talked_soldier");
 let ok = dialogue("wanderer_intro");
 if !ok { return; }
 
-let c = dialogue_choice("What do you mean?", "I'm just a traveler.");
+let c = dialogue_choice(false, "What do you mean?", "I'm just a traveler.");
 if c == -1 { return; }
 
 if c == 0 {
     let ok = dialogue("wanderer_explain");
     if !ok { return; }
-    let c2 = dialogue_choice("Tell me about him.", "I have to go.");
+    let c2 = dialogue_choice(false, "Tell me about him.", "I have to go.");
     if c2 == -1 { return; }
     if c2 == 0 {
         let ok = dialogue("wanderer_him");
         if !ok { return; }
-        let c3 = dialogue_choice("What did he leave out?", "Maybe later.");
+        let c3 = dialogue_choice(false, "What did he leave out?", "Maybe later.");
         if c3 == -1 { return; }
         if c3 == 0 {
             // Forced: the soldier won't let you walk off until you
             // hear this part out, so the bool is always true.
-            dialogue("wanderer_ugly", true);
+            dialogue(true, "wanderer_ugly");
             set_flag("met_old_soldier");
         }
     }

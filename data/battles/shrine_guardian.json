@@ -2,18 +2,14 @@
   "id": "shrine_guardian",
   "name": "Shrine Guardian",
   "player_move_budget_px": 96.0,
-  "player_speed": 6,
+  "player_initiative": 6,
   "enemies": [
     {
       "name": "Shrine Guardian",
       "kind": "boss_slime",
-      "spawn_at": "boss_slime_spot",
-      "hp": 30,
-      "atk": 5,
-      "def": 2,
-      "speed": 4,
-      "xp_reward": 80,
-      "move_budget_px": 64.0,
+      "x": 420,
+      "y": 256,
+      "initiative": 4,
       "ai": "chase_and_strike"
     }
   ]

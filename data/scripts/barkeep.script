@@ -11,6 +11,7 @@ if has_flag("met_old_soldier") {
     let ok = dialogue("barkeep_intro_aware");
     if !ok { return; }
     let c = dialogue_choice(
+        false,
         "He served with the storyteller.",
         "Tell me about the storyteller.",
         "Just passing through."
@@ -30,6 +31,7 @@ if has_flag("met_old_soldier") {
     let ok = dialogue("barkeep_intro");
     if !ok { return; }
     let c = dialogue_choice(
+        false,
         "Tell me about the storyteller.",
         "What do you know about the forest?",
         "Just passing through."
@@ -46,7 +48,7 @@ if has_flag("met_old_soldier") {
 
 let ok = dialogue("barkeep_storyteller");
 if !ok { return; }
-let c = dialogue_choice("Different how?", "Sounds like a fine man.", "I should be going.");
+let c = dialogue_choice(false, "Different how?", "Sounds like a fine man.", "I should be going.");
 if c == -1 { return; }
 if c == 0 {
     dialogue("barkeep_darker");

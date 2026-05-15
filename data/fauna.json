@@ -1,0 +1,22 @@
+[
+  {
+    "name": "slime",
+    "speed_px_per_sec": 50,
+    "hp": 3,
+    "atk": 2,
+    "def": 0,
+    "xp_reward": 10,
+    "xp_falloff_level": 4,
+    "sprite_id": "slime"
+  },
+  {
+    "name": "boss_slime",
+    "speed_px_per_sec": 64,
+    "hp": 30,
+    "atk": 5,
+    "def": 2,
+    "xp_reward": 50,
+    "xp_falloff_level": 1000,
+    "sprite_id": "boss_slime"
+  }
+]
