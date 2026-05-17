@@ -871,5 +871,12 @@
  "tilewidth": 32,
  "type": "map",
  "version": "1.10",
- "width": 22
+ "width": 22,
+ "properties": [
+  {
+   "name": "audio",
+   "type": "string",
+   "value": "cave_theme"
+  }
+ ]
 }
