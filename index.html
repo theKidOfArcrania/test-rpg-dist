@@ -2,29 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>test-rpg</title>
+    <title>Test RPG</title>
+
+    <!-- Mobile viewport: fill the screen, no pinch-zoom, draw under
+         the notch / dynamic island (viewport-fit=cover). -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#0a0a14">
+
+    <!-- iOS standalone-app polish. apple-touch-icon makes it look
+         right on the home screen; capable + status-bar-style hide
+         the Safari chrome when launched from the home-screen icon. -->
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Test RPG">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- PWA manifest: icons, display:standalone, landscape lock. -->
+    <link rel="manifest" href="manifest.json">
+
     <style>
-        html, body, canvas {
+        html, body {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            position: absolute;
             background: #000;
-            z-index: 0;
+            /* Mobile: stop the browser from hijacking gestures. */
+            touch-action: none;
+            overscroll-behavior: none;
+            /* Lock the page itself so iOS pull-to-refresh / Android
+               edge-swipes don't pull the document around under
+               the canvas. */
+            position: fixed;
+            inset: 0;
+            /* No-op on desktop; suppresses iOS Safari long-press
+               "share / copy" callouts and 200ms tap-zoom. */
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            touch-action: none;
         }
         canvas:focus { outline: none; }
     </style>
 </head>
 <body>
     <canvas id="glcanvas" tabindex="1"></canvas>
+    <!-- Wraps AudioContext to retry .resume() on every user gesture
+         until the macroquad audio plugin's context is running. Must
+         load *before* mq_js_bundle.js so its constructor capture
+         picks up the wrapped class. -->
+    <script src="audio_unlock.js"></script>
     <!-- Local copy of macroquad's miniquad JS bundle, patched to add
          the glCheckFramebufferStatus / glReadBuffer / glBlitFramebuffer
          imports that miniquad's WASM render-target path needs but the
          upstream CDN bundle is missing. See macroquad issue #989. -->
     <script src="mq_js_bundle.js"></script>
     <script src="storage.js"></script>
-    <script>load("test-rpg.wasm");</script>
+    <script src="platform.js"></script>
+    <script>
+        // Best-effort landscape lock for installed PWAs. Browsers
+        // ignore this on regular tabs (security: only allowed from
+        // a fullscreen / installed context). Quietly no-ops on
+        // desktop and on browsers that don't support it.
+        if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock('landscape').catch(() => {});
+        }
+
+        // Register the service worker for offline play + install
+        // prompts. Pinned to scope './' so it only manages this
+        // app's URLs.
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js').catch((err) => {
+                    console.warn('service worker register failed:', err);
+                });
+            });
+        }
+
+        load("test-rpg.wasm");
+    </script>
 </body>
 </html>
