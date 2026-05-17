@@ -7,7 +7,7 @@
 // asset so old clients evict the stale cache rather than fight
 // it.
 
-const CACHE_VERSION = 'v7';
+const CACHE_VERSION = 'v9';
 const CACHE_NAME = `test-rpg-${CACHE_VERSION}`;
 
 // App-shell entry points: cached on install.
