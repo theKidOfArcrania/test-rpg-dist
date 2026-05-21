@@ -146,6 +146,15 @@
             }
         }, 
         {
+         "animation":[
+                {
+                 "duration":250,
+                 "tileid":48
+                }, 
+                {
+                 "duration":250,
+                 "tileid":49
+                }],
          "id":48,
          "objectgroup":
             {
@@ -154,15 +163,50 @@
              "name":"",
              "objects":[
                     {
-                     "height":15,
+                     "height":13,
+                     "id":2,
+                     "name":"",
+                     "rotation":0,
+                     "type":"",
+                     "visible":true,
+                     "width":22,
+                     "x":1,
+                     "y":10
+                    }],
+             "opacity":1,
+             "type":"objectgroup",
+             "visible":true,
+             "x":0,
+             "y":0
+            }
+        }, 
+        {
+         "animation":[
+                {
+                 "duration":250,
+                 "tileid":50
+                }, 
+                {
+                 "duration":250,
+                 "tileid":51
+                }],
+         "id":50,
+         "objectgroup":
+            {
+             "draworder":"index",
+             "id":2,
+             "name":"",
+             "objects":[
+                    {
+                     "height":13,
                      "id":1,
                      "name":"",
                      "rotation":0,
                      "type":"",
                      "visible":true,
-                     "width":18,
-                     "x":3,
-                     "y":7
+                     "width":22,
+                     "x":1,
+                     "y":10
                     }],
              "opacity":1,
              "type":"objectgroup",
@@ -176,7 +220,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -202,7 +245,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -228,7 +270,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -254,7 +295,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -280,7 +320,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
@@ -306,7 +345,6 @@
          "objectgroup":
             {
              "draworder":"index",
-             "id":2,
              "name":"",
              "objects":[
                     {
